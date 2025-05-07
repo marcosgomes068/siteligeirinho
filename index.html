@@ -32,17 +32,88 @@
         position: relative;
         z-index: 2;
         color: #fff;
-        text-align: center;
-        padding: 2rem;
+        text-align: left;
+        padding: 2rem 3rem;
         width: 100%;
         max-width: 700px;
-        margin: 0 auto;
+        margin: 0;
     }
     @media (max-width: 700px) {
         .section-image {
             height: 50vh;
         }
     }
+/* Responsividade para mobile */
+@media (max-width: 900px) {
+    .header, .nav {
+        padding: 0 1rem;
+    }
+    .section-content {
+        padding: 1.2rem 0.7rem;
+        max-width: 98vw;
+    }
+    .image-section .section-content {
+        padding: 1.2rem 1rem;
+    }
+}
+@media (max-width: 700px) {
+    .header, .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 0.5rem;
+    }
+    .logo {
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 0.5rem;
+    }
+    .logo h1 {
+        font-size: 1.1rem;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 0.7rem;
+        width: 100%;
+        margin-top: 0.5rem;
+        background: rgba(0,0,0,0.85);
+        border-radius: 0 0 8px 8px;
+        padding: 0.7rem 0.5rem;
+        position: absolute;
+        left: 0;
+        top: 60px;
+        display: none;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-left: auto;
+        z-index: 20;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: #fff;
+        margin: 5px 0;
+        border-radius: 2px;
+        transition: 0.4s;
+    }
+    .main, .full-screen-section {
+        padding: 1rem 0.2rem;
+    }
+    .section-image {
+        height: 36vw;
+        min-height: 120px;
+    }
+    .section-content {
+        font-size: 0.98rem;
+    }
+}
 </style>
 </head>
 <body>
